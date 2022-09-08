@@ -1,8 +1,8 @@
 {
-  "name": "Notes",
-  "description": "!",
-  "version": "1.0",
   "manifest_version": 3,
+  "name": "QuickLauncher",
+  "description": "Quick launcher with search bar.",
+  "version": "1.0.0",
   "background":{
       "service_worker": "background.js"
   },

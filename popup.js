@@ -1,15 +1,15 @@
 // Initialize button with user's preferred color
-let changeColor = document.getElementById("changeColor");
+let changeColorButton = document.getElementById("btn_change_color");
 
 chrome.storage.sync.get("color", ({ color }) => {
-  changeColor.style.backgroundColor = color;
+  changeColorButton.style.backgroundColor = color;
 });
 
 // When the button is clicked, inject setPageBackgroundColor into current page
-changeColor.addEventListener("click", async () => {
+changeColorButton.addEventListener("click", async () => {
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
-  console.log('Lby!');
+  console.log("Lby!");
 
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
